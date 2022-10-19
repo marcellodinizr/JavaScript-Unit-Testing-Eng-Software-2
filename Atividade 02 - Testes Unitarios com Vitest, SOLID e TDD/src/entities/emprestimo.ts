@@ -1,11 +1,12 @@
-import { Livro } from "./livro";
+import { Livro } from "./Livro";
 
 
 export interface EmprestimoProps {
  usuario: string;
  dataEmprestimo: Date;
  dataDevolucao: Date;
- livros: Array<Livro>;
+ dataPrevista: Date;
+ livros?: Array<Livro>;
 }
 
 export class Emprestimo {
@@ -23,7 +24,21 @@ export class Emprestimo {
 		return this.props.dataDevolucao
 	}
 
+	get dataPrevista(): Date {
+    return this.props.dataPrevista
+	}
+
 	constructor(props: EmprestimoProps) {
+		const {dataEmprestimo, dataDevolucao} = props
+
+		if(dataEmprestimo <= new Date()) {
+			throw new Error("Data de emprestimos inválidos")
+		}
+
+		if(dataDevolucao <= new Date()) {
+			throw new Error("Data de devoluções inválidos")
+		}
+
 		this.props = props
 	}
 }
