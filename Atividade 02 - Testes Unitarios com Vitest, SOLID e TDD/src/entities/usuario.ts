@@ -1,6 +1,6 @@
 export interface UsuarioProps {
+	id: string; 
  nome: string;
- emDebito: boolean;
 }
 
 export class Usuario {
@@ -10,8 +10,8 @@ export class Usuario {
 		return this.props.nome
 	 }
 
-	 get emDebito(): boolean {
-		return this.props.emDebito
+	 get id(): string {
+		return this.props.id
 	 }
 
 	 constructor(props: UsuarioProps) {
