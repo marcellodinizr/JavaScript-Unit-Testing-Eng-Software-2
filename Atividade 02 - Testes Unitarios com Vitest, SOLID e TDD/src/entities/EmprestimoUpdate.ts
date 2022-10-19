@@ -1,5 +1,4 @@
-import { Livro } from "./Livro";
-
+import { Livro } from "./LivroUpdate";
 
 export interface EmprestimoProps {
  usuario: string;

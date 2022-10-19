@@ -1,4 +1,4 @@
-import { Emprestimo } from "./Emprestimo";
+import { Emprestimo } from "./EmprestimoUpdate";
 
 export interface LivroProps {
 	autor: string
