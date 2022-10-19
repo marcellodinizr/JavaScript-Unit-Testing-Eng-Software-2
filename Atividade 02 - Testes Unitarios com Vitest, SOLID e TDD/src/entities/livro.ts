@@ -1,9 +1,10 @@
-import { Emprestimo } from "./emprestimo";
+import { Emprestimo } from "./Emprestimo";
 
 export interface LivroProps {
 	autor: string
 	titulo: string
  	emprestado: boolean
+	reservado: boolean
 	historico: Array<Emprestimo>
 }
 
@@ -20,6 +21,10 @@ export class Livro {
 
 	get emprestado(): boolean {
 		return this.props.emprestado
+	}
+
+	get reservado(): boolean {
+		return this.props.reservado
 	}
 
 	get historico(): Array<Emprestimo> {
