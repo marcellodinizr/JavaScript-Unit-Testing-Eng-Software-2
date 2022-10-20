@@ -1,6 +1,6 @@
 export interface UsuarioProps {
 	id: string; 
- nome: string;
+  nome: string;
 }
 
 export class Usuario {
@@ -17,4 +17,4 @@ export class Usuario {
 	 constructor(props: UsuarioProps) {
 		this.props = props
 	 }
-	}
+}

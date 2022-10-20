@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { getDataFutura, getDataPrevista } from '../tests/utils/GetData';
 
+import { getDataFutura, getDataPrevista } from '../tests/utils/GetData';
 import { Emprestimo } from './Emprestimo';
 
 describe('Classe: Emprestimo', () => {
