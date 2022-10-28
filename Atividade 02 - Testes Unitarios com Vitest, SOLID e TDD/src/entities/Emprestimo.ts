@@ -1,18 +1,19 @@
 import { Livro } from "./Livro";
+import { Usuario } from "./Usuario";
 
 export interface EmprestimoProps {
- usuario: string;
+ usuario: Array<Usuario>;
  dataEmprestimo: Date;
  dataDevolucao: Date;
  dataPrevista: Date;
- livros?: Array<Livro>;
+ livros: Array<Livro>;
 }
 
 export class Emprestimo {
 	private props: EmprestimoProps
 
-	get usuario(): string {
-		return this.props.usuario
+	get usuario(): Array<Usuario> {
+		return this.props.usuario;
 	}
 
 	get dataEmprestimo(): Date {
@@ -25,6 +26,10 @@ export class Emprestimo {
 
 	get dataPrevista(): Date {
     return this.props.dataPrevista
+	}
+
+	get livros(): Array<Livro> {
+		return this.props.livros	
 	}
 
 	constructor(props: EmprestimoProps) {

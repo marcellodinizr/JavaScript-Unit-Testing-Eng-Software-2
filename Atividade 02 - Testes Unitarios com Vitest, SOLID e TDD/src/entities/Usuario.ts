@@ -6,12 +6,12 @@ export interface UsuarioProps {
 export class Usuario {
 	private props: UsuarioProps
 
-	 get nome(): string {
-		return this.props.nome
-	 }
-
 	 get id(): string {
 		return this.props.id
+	 }
+
+	 get nome(): string {
+		return this.props.nome
 	 }
 
 	 constructor(props: UsuarioProps) {
