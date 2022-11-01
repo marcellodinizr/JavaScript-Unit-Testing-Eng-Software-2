@@ -1,20 +1,20 @@
 export interface UsuarioProps {
 	id: string; 
-  nome: string;
+	nome: string;
 }
 
 export class Usuario {
 	private props: UsuarioProps
-
-	 get nome(): string {
+	
+	get nome(): string {
 		return this.props.nome
-	 }
-
-	 get id(): string {
+	}
+	
+	get id(): string {
 		return this.props.id
-	 }
-
-	 constructor(props: UsuarioProps) {
+	}
+	
+	constructor(props: UsuarioProps) {
 		this.props = props
-	 }
+	}
 }

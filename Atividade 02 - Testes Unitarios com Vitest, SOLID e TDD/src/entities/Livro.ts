@@ -3,7 +3,7 @@ import { Emprestimo } from "./Emprestimo";
 export interface LivroProps {
 	autor: string
 	titulo: string
- 	emprestado: boolean
+  emprestado: boolean
 	reservado: boolean
 	historico: Array<Emprestimo>
 }
