@@ -10,7 +10,7 @@ describe('Classe: Emprestimo', () => {
 		const dataPrevista = getDataPrevista('2022-10-26')
 
 		const emprestimo = new Emprestimo({
-			usuario: 'Marcello',
+			usuario: [],
 			dataEmprestimo,
 			dataDevolucao,
 			dataPrevista,
@@ -18,7 +18,6 @@ describe('Classe: Emprestimo', () => {
 		})
 
 		expect(emprestimo).toBeInstanceOf(Emprestimo)
-		expect(emprestimo.usuario).toEqual('Marcello')
 	})
 
 	it('não deve criar um emprestimo com a data de devolucao antes da data de emprestimo', () => {
@@ -28,10 +27,11 @@ describe('Classe: Emprestimo', () => {
 
 		expect(() => {
 			return new Emprestimo({
-				usuario: 'Marcello',
+				usuario: [],
         dataEmprestimo,
 				dataDevolucao,
 				dataPrevista,
+				livros:[]
 			})
 		})
 	})
@@ -46,10 +46,11 @@ describe('Classe: Emprestimo', () => {
 
 		expect(() => {
 			return new Emprestimo({
-				usuario: 'Marcello',
+				usuario: [],
         dataEmprestimo,
 				dataDevolucao,
 				dataPrevista,
+				livros:[]
 			})
 		})
 	})

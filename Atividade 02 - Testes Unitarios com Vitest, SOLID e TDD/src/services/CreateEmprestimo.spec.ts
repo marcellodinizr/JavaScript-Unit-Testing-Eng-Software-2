@@ -13,7 +13,7 @@ describe('Service: Criar um emprestimo', () => {
 		const dataPrevista = getDataPrevista('2022-10-26')
 
 		expect(createEmprestimo.execute({
-			usuario: 'Marcello',
+			usuario: [],
 			dataEmprestimo,
 			dataDevolucao,
 			dataPrevista,
