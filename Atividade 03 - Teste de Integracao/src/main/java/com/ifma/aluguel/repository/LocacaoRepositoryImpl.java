@@ -1,12 +1,11 @@
 package com.ifma.aluguel.repository;
 
+import com.ifma.aluguel.models.Locacao;
 import java.util.List;
-
 import javax.persistence.EntityManager;
 
-import com.ifma.aluguel.models.Locacao;
-
-public class LocacaoRepositoryImpl implements com.ifma.aluguel.repository.LocacaoRepository {
+public class LocacaoRepositoryImpl
+		implements com.ifma.aluguel.repository.LocacaoRepository {
 
 	private EntityManager manager;
 
@@ -16,7 +15,10 @@ public class LocacaoRepositoryImpl implements com.ifma.aluguel.repository.Locaca
 
 	@Override
 	public Locacao getById(Integer idLocacao) {
-		List<Locacao> listaRetorno = manager.createQuery("from Locacao a where a.id_locacao = :id_locacao", Locacao.class)
+		List<Locacao> listaRetorno = manager
+				.createQuery(
+						"from Locacao a where a.id_locacao = :id_locacao",
+						Locacao.class)
 				.setParameter("id_locacao", idLocacao)
 				.getResultList();
 

@@ -1,12 +1,11 @@
 package com.ifma.aluguel.repository;
 
+import com.ifma.aluguel.models.Cliente;
 import java.util.List;
-
 import javax.persistence.EntityManager;
 
-import com.ifma.aluguel.models.Cliente;
-
-public class ClienteRepositoryImpl implements com.ifma.aluguel.repository.ClienteRepository {
+public class ClienteRepositoryImpl
+		implements com.ifma.aluguel.repository.ClienteRepository {
 
 	private EntityManager manager;
 
@@ -16,7 +15,10 @@ public class ClienteRepositoryImpl implements com.ifma.aluguel.repository.Client
 
 	@Override
 	public Cliente getById(Integer id_cliente) {
-		List<Cliente> listaRetorno = manager.createQuery("from Cliente i where i.id_cliente = :id_cliente", Cliente.class)
+		List<Cliente> listaRetorno = manager
+				.createQuery(
+						"from Cliente i where i.id_cliente = :id_cliente",
+						Cliente.class)
 				.setParameter("id_cliente", id_cliente)
 				.getResultList();
 
@@ -25,7 +27,8 @@ public class ClienteRepositoryImpl implements com.ifma.aluguel.repository.Client
 
 	@Override
 	public Cliente getClienteByCpf(String cpf) {
-		List<Cliente> listaRetorno = manager.createQuery("from Cliente i where i.cpf = :cpf", Cliente.class)
+		List<Cliente> listaRetorno = manager
+				.createQuery("from Cliente i where i.cpf = :cpf", Cliente.class)
 				.setParameter("cpf", cpf)
 				.getResultList();
 

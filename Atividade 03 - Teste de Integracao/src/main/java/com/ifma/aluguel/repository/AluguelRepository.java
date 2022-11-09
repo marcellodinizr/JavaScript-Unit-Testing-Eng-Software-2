@@ -13,10 +13,6 @@ public interface AluguelRepository {
 
 	public List<Aluguel> getAlugueisDisponiveis(Aluguel aluguel_base);
 
-	// public List<Aluguel> getAlugueisPagos();
-
-	// public List<Aluguel> getAlugueisPagosNaDataVencimento();
-
 	public Aluguel salvarAluguel(Aluguel aluguel);
 
 	public boolean atualizarAluguel(Aluguel aluguel);

@@ -1,12 +1,11 @@
 package com.ifma.aluguel.repository;
 
+import com.ifma.aluguel.models.Imovel;
 import java.util.List;
-
 import javax.persistence.EntityManager;
 
-import com.ifma.aluguel.models.Imovel;
-
-public class ImovelRepositoryImpl implements com.ifma.aluguel.repository.ImovelRepository {
+public class ImovelRepositoryImpl
+		implements com.ifma.aluguel.repository.ImovelRepository {
 
 	private EntityManager manager;
 
@@ -16,7 +15,8 @@ public class ImovelRepositoryImpl implements com.ifma.aluguel.repository.ImovelR
 
 	@Override
 	public Imovel getById(Integer id_imovel) {
-		List<Imovel> listaRetorno = manager.createQuery("from Imovel i where i.id_imovel = :id_imovel", Imovel.class)
+		List<Imovel> listaRetorno = manager
+				.createQuery("from Imovel i where i.id_imovel = :id_imovel", Imovel.class)
 				.setParameter("id_imovel", id_imovel)
 				.getResultList();
 
@@ -39,7 +39,8 @@ public class ImovelRepositoryImpl implements com.ifma.aluguel.repository.ImovelR
 				"and i.obs = COALESCE (:obs, i.obs) " +
 				"and not exists (select 0 from Locacao l where l.id_imovel = i.id_imovel  and l.ativo = true)";
 
-		List<Imovel> listaRetorno = manager.createQuery(query, Imovel.class)
+		List<Imovel> listaRetorno = manager
+				.createQuery(query, Imovel.class)
 				.setParameter("tipo_imovel", imovel_base.getTipo_imovel())
 				.setParameter("endereco", imovel_base.getEndereco())
 				.setParameter("bairro", imovel_base.getBairro())
@@ -49,27 +50,14 @@ public class ImovelRepositoryImpl implements com.ifma.aluguel.repository.ImovelR
 				.setParameter("banheiros", imovel_base.getBanheiros())
 				.setParameter("suites", imovel_base.getSuites())
 				.setParameter("vagas_garagem", imovel_base.getVagas_garagem())
-				.setParameter("valor_aluguel_sugerido", imovel_base.getValor_aluguel_sugerido())
+				.setParameter(
+						"valor_aluguel_sugerido",
+						imovel_base.getValor_aluguel_sugerido())
 				.setParameter("obs", imovel_base.getObs())
 				.getResultList();
 
 		return listaRetorno;
 	}
-
-	// @Override
-	// public List<Imovel> getImoveisDisponiveisAbaixoDoValor(Double valor_sugerido)
-	// {
-	// String query = "from Imovel i " +
-	// "where i.valor_aluguel_sugerido <= :valor_aluguel_sugerido " +
-	// "and not exists (select 0 from Locacao l where l.id_imovel = i.id_imovel and
-	// l.ativo = true)";
-
-	// List<Imovel> listaRetorno = manager.createQuery(query, Imovel.class)
-	// .setParameter("valor_aluguel_sugerido", valor_sugerido)
-	// .getResultList();
-
-	// return listaRetorno;
-	// }
 
 	@Override
 	public Imovel salvar(Imovel imovel) {
