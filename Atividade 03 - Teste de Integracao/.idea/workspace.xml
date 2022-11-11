@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25cd1715-64ef-4901-ac8f-91b359b2abc0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +53,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/Programação/aluguel-imoveis-tdd-master/aluguel-imoveis-tdd-master",
+    "last_opened_file_path": "C:/Users/marce/OneDrive/Documentos/Programacao/Engenharia de Software 2/aluguel-imoveis-tdd-master/aluguel-imoveis-tdd-master",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -106,6 +103,8 @@
       <workItem from="1668171985312" duration="28000" />
       <workItem from="1668172030797" duration="151000" />
       <workItem from="1668172402497" duration="1423000" />
+      <workItem from="1668190517242" duration="56000" />
+      <workItem from="1668190722652" duration="18000" />
     </task>
     <servers />
   </component>
