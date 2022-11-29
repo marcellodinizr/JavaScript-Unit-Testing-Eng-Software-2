@@ -8,9 +8,9 @@ public interface ClienteRepository {
 
 	public Cliente getClienteByCpf(String cpf);
 
-	public Cliente salvar(Cliente cliente);
+	public Cliente salvarCliente(Cliente cliente);
 
-	public boolean atualizar(Cliente cliente);
+	public boolean atualizarCliente(Cliente cliente);
 
-	public boolean deletar(Cliente cliente);
+	public boolean deletarCliente(Cliente cliente);
 }

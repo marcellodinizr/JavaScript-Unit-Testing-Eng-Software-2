@@ -36,20 +36,20 @@ public class ClienteRepositoryImpl
 	}
 
 	@Override
-	public Cliente salvar(Cliente cliente) {
+	public Cliente salvarCliente(Cliente cliente) {
 		manager.persist(cliente);
 		manager.refresh(cliente);
 		return cliente;
 	}
 
 	@Override
-	public boolean atualizar(Cliente cliente) {
+	public boolean atualizarCliente(Cliente cliente) {
 		manager.merge(cliente);
 		return true;
 	}
 
 	@Override
-	public boolean deletar(Cliente cliente) {
+	public boolean deletarCliente(Cliente cliente) {
 		manager.remove(cliente);
 		return true;
 	}
