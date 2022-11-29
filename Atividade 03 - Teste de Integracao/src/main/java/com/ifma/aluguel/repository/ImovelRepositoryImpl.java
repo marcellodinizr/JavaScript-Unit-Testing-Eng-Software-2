@@ -60,20 +60,20 @@ public class ImovelRepositoryImpl
 	}
 
 	@Override
-	public Imovel salvar(Imovel imovel) {
+	public Imovel salvarImovel(Imovel imovel) {
 		manager.persist(imovel);
 		manager.refresh(imovel);
 		return imovel;
 	}
 
 	@Override
-	public boolean atualizar(Imovel imovel) {
+	public boolean atualizarImovel(Imovel imovel) {
 		manager.merge(imovel);
 		return true;
 	}
 
 	@Override
-	public boolean deletar(Imovel imovel) {
+	public boolean deletarImovel(Imovel imovel) {
 		manager.remove(manager.contains(imovel) ? imovel : manager.merge(imovel));
 		return true;
 	}

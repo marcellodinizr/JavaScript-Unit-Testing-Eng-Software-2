@@ -10,9 +10,9 @@ public interface ImovelRepository {
 
 	public List<Imovel> getImoveisDisponiveis(Imovel imovel_base);
 
-	public Imovel salvar(Imovel imovel);
+	public Imovel salvarImovel(Imovel imovel);
 
-	public boolean atualizar(Imovel imovel);
+	public boolean atualizarImovel(Imovel imovel);
 
-	public boolean deletar(Imovel imovel);
+	public boolean deletarImovel(Imovel imovel);
 }
