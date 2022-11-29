@@ -26,20 +26,20 @@ public class LocacaoRepositoryImpl
 	}
 
 	@Override
-	public Locacao salvar(Locacao locacao) {
+	public Locacao salvarLocacao(Locacao locacao) {
 		manager.persist(locacao);
 		manager.refresh(locacao);
 		return locacao;
 	}
 
 	@Override
-	public boolean atualizar(Locacao locacao) {
+	public boolean atualizarLocacao(Locacao locacao) {
 		manager.merge(locacao);
 		return true;
 	}
 
 	@Override
-	public boolean deletar(Locacao locacao) {
+	public boolean deletarLocacao(Locacao locacao) {
 		manager.remove(locacao);
 		return true;
 	}
