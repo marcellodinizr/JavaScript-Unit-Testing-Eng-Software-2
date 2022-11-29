@@ -14,12 +14,12 @@ public class LocacaoRepositoryImpl
 	}
 
 	@Override
-	public Locacao getById(Integer idLocacao) {
+	public Locacao getById(Integer id_locacao) {
 		List<Locacao> listaRetorno = manager
 				.createQuery(
 						"from Locacao a where a.id_locacao = :id_locacao",
 						Locacao.class)
-				.setParameter("id_locacao", idLocacao)
+				.setParameter("id_locacao", id_locacao)
 				.getResultList();
 
 		return listaRetorno.size() > 0 ? listaRetorno.get(0) : null;
