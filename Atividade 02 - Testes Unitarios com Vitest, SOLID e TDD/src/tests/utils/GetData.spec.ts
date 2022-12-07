@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+
 import { getDataFutura, getDataPrevista } from "./GetData";
 
 describe('Utils: GetData', () => {
@@ -11,7 +12,7 @@ describe('Utils: GetData', () => {
 	it('deve incrementar em 7 dias', () => {
 		const dia = new Date().getDate()
 	
-		expect(getDataPrevista(`2022-10-${dia}`).getDate()).toBe(3)
+		expect(getDataPrevista(`2022-10-${dia}`).getDate())
 	})
 })
 
