@@ -1,0 +1,14 @@
+{
+	"configurations": [
+		{
+			"type": "java",
+			"name": "Spring Boot-App<testes>",
+			"request": "launch",
+			"cwd": "${workspaceFolder}",
+			"mainClass": "dcomp.es2.locadora.App",
+			"projectName": "testes",
+			"args": "",
+			"envFile": "${workspaceFolder}/.env"
+		}
+	]
+}
